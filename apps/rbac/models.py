@@ -5,8 +5,8 @@ from django.conf import settings
 
 class Permission(models.Model):
 
-    name = models.CharField(max_length=20, unique=True, verbose_name="Nombre del Permiso")
-    code_name = models.CharField(max_length=20, unique=True, verbose_name="Código del Permiso")
+    name = models.CharField(max_length=100, unique=True, verbose_name="Nombre del Permiso")
+    code_name = models.CharField(max_length=100, unique=True, verbose_name="Código del Permiso")
     description = models.TextField(blank=True, null=True, verbose_name="Descripción")
     is_active = models.BooleanField(default=True, verbose_name="Activo")
     fecha_creacion = models.DateTimeField(auto_now_add=True)

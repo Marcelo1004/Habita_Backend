@@ -7,7 +7,7 @@ class ServicioAdmin(admin.ModelAdmin):
     Configuración para la visualización del modelo Producto en el panel de administración.
     """
     list_display = ('nombre', 'precio', 'categoria','imagen_tag')
-    list_filter = ('categoria')
+
     search_fields = ('nombre', 'descripcion')
     readonly_fields = ('imagen_tag',) # Para mostrar la imagen en el admin
 
